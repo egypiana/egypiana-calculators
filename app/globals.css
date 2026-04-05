@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1E3A8A;
+  --color-secondary: #DC2626;
+  --color-amber: #F59E0B;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #1E293B;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+}
+
+.dark {
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-text-primary: #F1F5F9;
+}
+
+html {
+  font-family: 'Cairo', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text-primary;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+/* RTL Utilities */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Number inputs — prevent iOS zoom */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Focus rings for accessibility */
+*:focus-visible {
+  outline: 2px solid #1E3A8A;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Trending bar scroll */
+.trending-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.trending-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Calculator button styles */
+.calc-btn {
+  @apply flex items-center justify-center rounded-xl font-bold text-lg transition-all duration-150 active:scale-95 select-none;
+  min-height: 56px;
+}
+
+.calc-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Result pulse animation */
+@keyframes resultPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.result-pulse {
+  animation: resultPulse 0.3s ease-in-out;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  @apply fixed inset-0 bg-black/50 z-40;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #F8FAFC 100%);
+}
+
+/* Card hover effect */
+.category-card {
+  @apply transition-all duration-300 cursor-pointer;
+}
+
+.category-card:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+/* Responsive table */
+.responsive-table {
+  @apply w-full overflow-x-auto;
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

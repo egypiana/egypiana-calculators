@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block admin/internal pages if any
+Disallow: /api/
+Disallow: /_next/
+Disallow: /search?
+
+# Sitemap location
+Sitemap: https://calculator.egypiana.com/sitemap.xml
+
+# Crawl delay (optional — remove if you want faster indexing)
+# Crawl-delay: 1
