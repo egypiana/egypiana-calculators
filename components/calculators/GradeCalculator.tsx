@@ -59,9 +59,9 @@ export default function GradeCalculator() {
       <div className="space-y-2">
         <div className="grid grid-cols-12 gap-2 text-xs font-semibold text-gray-500 dark:text-gray-400 px-1">
           <span className="col-span-5 text-right">المادة</span>
-          <span className="col-span-4 text-center">الدرجة (من 100)</span>
+          <span className="col-span-3 text-center">الدرجة (من 100)</span>
           <span className="col-span-2 text-center">الوزن</span>
-          <span className="col-span-1" />
+          <span className="col-span-2" />
         </div>
         {subjects.map((s, i) => (
           <div key={i} className="grid grid-cols-12 gap-2 items-center">
@@ -70,11 +70,11 @@ export default function GradeCalculator() {
               className="col-span-5 px-3 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-right text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
             <input type="number" value={s.grade} onChange={e => update(i, "grade", e.target.value)}
               placeholder="85" min="0" max="100"
-              className="col-span-4 px-3 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
+              className="col-span-3 px-3 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
             <input type="number" value={s.weight} onChange={e => update(i, "weight", e.target.value)}
               placeholder="1" min="0.1" step="0.5"
               className="col-span-2 px-2 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
-            <button onClick={() => remove(i)} className="col-span-1 text-red-400 hover:text-red-600 flex justify-center"><Trash2 className="h-4 w-4" /></button>
+            <button onClick={() => remove(i)} className="col-span-2 text-red-400 hover:text-red-600 flex justify-center items-center min-h-[44px]"><Trash2 className="h-4 w-4" /></button>
           </div>
         ))}
       </div>

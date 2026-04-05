@@ -117,7 +117,7 @@ export default function LoanCalculator() {
       {result && (
         <div className="space-y-4">
           {/* Summary Cards */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="bg-[#1E3A8A] rounded-2xl p-4 text-white text-center">
               <p className="text-xs text-blue-200 mb-1">القسط الشهري</p>
               <p className="text-xl font-black">{formatNumber(result.monthlyPayment, 0)}</p>

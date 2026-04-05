@@ -11,12 +11,19 @@ interface AdBlockProps {
   publisherId?: string;
 }
 
+// Max declared width per format — capped at 100% via CSS
 const formatDimensions: Record<AdFormat, { width: number | string; height: number }> = {
   auto: { width: "100%", height: 90 },
   rectangle: { width: 300, height: 250 },
   leaderboard: { width: 728, height: 90 },
   "half-page": { width: 300, height: 600 },
   "mobile-banner": { width: 320, height: 50 },
+};
+
+// Mobile heights for formats that change on small screens
+const mobileDimensions: Partial<Record<AdFormat, { height: number }>> = {
+  leaderboard: { height: 60 },
+  "half-page": { height: 250 },
 };
 
 const formatLabels: Record<AdFormat, string> = {
@@ -53,11 +60,10 @@ export default function AdBlock({
   if (isDev || !hasAdSense) {
     return (
       <div
-        className={`flex items-center justify-center bg-gray-100 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg text-gray-400 dark:text-gray-500 text-sm font-medium ${className}`}
+        className={`flex items-center justify-center bg-gray-100 dark:bg-gray-800 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg text-gray-400 dark:text-gray-500 text-sm font-medium overflow-hidden w-full ${className}`}
         style={{
-          width: typeof dimensions.width === "number" ? `${dimensions.width}px` : dimensions.width,
+          maxWidth: typeof dimensions.width === "number" ? `${dimensions.width}px` : dimensions.width,
           height: `${dimensions.height}px`,
-          maxWidth: "100%",
           margin: "0 auto",
         }}
         role="complementary"
@@ -71,21 +77,17 @@ export default function AdBlock({
   // ── Production AdSense unit ──────────────────────────────────
   return (
     <div
-      className={`text-center ${className}`}
-      style={{ maxWidth: "100%", overflow: "hidden" }}
+      className={`text-center w-full overflow-hidden ${className}`}
+      style={{ maxWidth: typeof dimensions.width === "number" ? `${dimensions.width}px` : dimensions.width, margin: "0 auto" }}
     >
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{
-          display: "block",
-          width: typeof dimensions.width === "number" ? `${dimensions.width}px` : dimensions.width,
-          height: `${dimensions.height}px`,
-        }}
+        style={{ display: "block" }}
         data-ad-client={publisherId}
         data-ad-slot={slot}
-        data-ad-format={format === "auto" ? "auto" : undefined}
-        data-full-width-responsive={format === "auto" ? "true" : undefined}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
       />
     </div>
   );

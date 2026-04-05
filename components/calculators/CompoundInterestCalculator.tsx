@@ -65,7 +65,7 @@ export default function CompoundInterestCalculator() {
       </button>
       {result && (
         <div className="space-y-3">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="bg-[#1E3A8A] rounded-2xl p-4 text-white text-center"><p className="text-xs text-blue-200 mb-1">القيمة النهائية</p><p className="text-lg font-black">{formatNumber(result.finalAmount, 0)}</p></div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-4 text-center border border-green-200 dark:border-green-700"><p className="text-xs text-green-600 mb-1">إجمالي الأرباح</p><p className="text-lg font-black text-[#10B981]">{formatNumber(result.totalInterest, 0)}</p></div>
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center border border-gray-100 dark:border-gray-700"><p className="text-xs text-gray-500 mb-1">إجمالي الإيداعات</p><p className="text-lg font-black text-[#1E293B] dark:text-white">{formatNumber(result.totalContribs, 0)}</p></div>

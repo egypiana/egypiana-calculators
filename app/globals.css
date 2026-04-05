@@ -24,12 +24,15 @@
 html {
   font-family: 'Cairo', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-background text-text-primary;
   font-family: 'Cairo', sans-serif;
   direction: rtl;
+  overflow-x: hidden;
+  min-width: 320px;
 }
 
 /* RTL Utilities */
@@ -38,13 +41,34 @@ body {
   text-align: right;
 }
 
-/* Number inputs — prevent iOS zoom */
+/* Number inputs — prevent iOS zoom (must be 16px or larger) */
 input[type="number"],
 input[type="text"],
 input[type="email"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="range"],
 select,
 textarea {
-  font-size: 16px;
+  font-size: 16px !important;
+}
+
+/* Minimum touch target size 44px */
+button, a, [role="button"] {
+  min-height: 44px;
+}
+
+/* Exception: inline text links & icon-only tiny elements use min-height: auto override explicitly */
+.touch-target-sm {
+  min-height: auto;
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Custom scrollbar */

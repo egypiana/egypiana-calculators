@@ -86,8 +86,8 @@ export default function GPACalculator() {
             )}
             <input type="number" value={c.hours} onChange={(e) => updateCourse(i,"hours",e.target.value)}
               placeholder="ساعات" min="1"
-              className="col-span-3 px-3 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
-            <button onClick={() => removeCourse(i)} className="col-span-1 text-red-400 hover:text-red-600 flex justify-center"><Trash2 className="h-4 w-4" /></button>
+              className="col-span-2 px-3 py-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
+            <button onClick={() => removeCourse(i)} className="col-span-2 text-red-400 hover:text-red-600 flex justify-center items-center min-h-[44px]"><Trash2 className="h-4 w-4" /></button>
           </div>
         ))}
       </div>
