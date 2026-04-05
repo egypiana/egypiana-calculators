@@ -6,7 +6,11 @@ import { trackCalculatorUsed } from "@/components/analytics/GoogleAnalytics";
 
 type Category = "length"|"weight"|"temperature"|"area"|"volume"|"speed";
 
-const CATEGORIES: Record<Category, {label:string; units: Array<{key:string;label:string;toBase:number|(v:number)=>number;fromBase:number|(v:number)=>number}>}> = {
+type ConvFn = (v: number) => number;
+type UnitDef = { key: string; label: string; toBase: number | ConvFn; fromBase: number | ConvFn };
+type CategoryDef = { label: string; units: UnitDef[] };
+
+const CATEGORIES: Record<Category, CategoryDef> = {
   length: { label:"المسافة والطول", units:[
     {key:"km",label:"كيلومتر",toBase:1000,fromBase:0.001},
     {key:"m",label:"متر",toBase:1,fromBase:1},
