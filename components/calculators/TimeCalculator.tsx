@@ -63,10 +63,10 @@ export default function TimeCalculator() {
 
       {mode === "diff" && (
         <div className="grid sm:grid-cols-2 gap-4">
-          {[["التاريخ الأول", date1, setDate1],["التاريخ الثاني", date2, setDate2]].map(([l,v,s]) => (
-            <div key={String(l)}>
-              <label className="block text-sm font-semibold text-[#1E293B] dark:text-gray-200 mb-1.5">{String(l)}</label>
-              <input type="datetime-local" value={String(v)} onChange={e => (s as (v:string)=>void)(e.target.value)}
+          {([["التاريخ الأول", date1, setDate1],["التاريخ الثاني", date2, setDate2]] as [string, string, (v:string)=>void][]).map(([l,v,s]) => (
+            <div key={l}>
+              <label className="block text-sm font-semibold text-[#1E293B] dark:text-gray-200 mb-1.5">{l}</label>
+              <input type="datetime-local" value={v} onChange={e => s(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" />
             </div>
           ))}

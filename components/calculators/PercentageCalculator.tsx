@@ -42,10 +42,10 @@ export default function PercentageCalculator() {
         ))}
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
-        {[["a",current[2],a,setA],["b",current[3],b,setB]].map(([id,label,val,setter]) => (
-          <div key={id as string}>
+        {([["a",current[2],a,setA],["b",current[3],b,setB]] as [string, string, string, (v:string)=>void][]).map(([id,label,val,setter]) => (
+          <div key={id}>
             <label className="block text-sm font-semibold text-[#1E293B] dark:text-gray-200 mb-1.5">{label}</label>
-            <input type="number" value={val as string} onChange={(e) => (setter as (v:string)=>void)(e.target.value)}
+            <input type="number" value={val} onChange={(e) => setter(e.target.value)}
               className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white" placeholder="0" />
           </div>
         ))}

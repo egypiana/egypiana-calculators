@@ -42,15 +42,15 @@ export default function BMRCalculator() {
         ))}
       </div>
       <div className="grid sm:grid-cols-3 gap-4">
-        {[["العمر (سنة)", age, setAge, "25", "1"],
+        {([["العمر (سنة)", age, setAge, "25", "1"],
           ["الوزن (كجم)", weight, setWeight, "70", "0.1"],
           ["الطول (سم)", height, setHeight, "170", "1"],
-        ].map(([l, v, s, p, step]) => (
-          <div key={String(l)}>
-            <label className="block text-sm font-semibold text-[#1E293B] dark:text-gray-200 mb-1.5">{String(l)}</label>
-            <input type="number" value={String(v)} onChange={e => (s as (v:string)=>void)(e.target.value)}
+        ] as [string, string, (v:string)=>void, string, string][]).map(([l, v, s, p, step]) => (
+          <div key={l}>
+            <label className="block text-sm font-semibold text-[#1E293B] dark:text-gray-200 mb-1.5">{l}</label>
+            <input type="number" value={v} onChange={e => s(e.target.value)}
               className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-xl text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] bg-white dark:bg-gray-800 text-[#1E293B] dark:text-white"
-              placeholder={String(p)} min="0" step={String(step)} />
+              placeholder={p} min="0" step={step} />
           </div>
         ))}
       </div>
