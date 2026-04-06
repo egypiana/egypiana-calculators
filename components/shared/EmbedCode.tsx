@@ -89,18 +89,6 @@ export default function EmbedCode({ url, title = "حاسبة", height = 650 }: E
         title="اضغط للنسخ"
       />
 
-      {/* Attribution note */}
-      <p className="text-[11px] text-gray-400 dark:text-gray-500 text-right leading-snug">
-        * يُشترط الإبقاء على رابط المصدر:{" "}
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#1E3A8A] dark:text-blue-400 hover:underline break-all"
-        >
-          {url}
-        </a>
-      </p>
     </div>
   );
 }
