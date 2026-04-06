@@ -3,6 +3,7 @@ import EndOfServiceCalculator from "@/components/calculators/EndOfServiceCalcula
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import FAQSection from "@/components/shared/FAQSection";
 import ShareButtons from "@/components/shared/ShareButtons";
+import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 
@@ -67,6 +68,9 @@ export default function EndOfServicePage() {
               <EndOfServiceCalculator />
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
                 <ShareButtons title="حاسبة نهاية الخدمة — السعودية والإمارات ومصر" />
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <EmbedCode url="https://calculator.egypiana.com/financial/end-of-service" title="حاسبة مكافأة نهاية الخدمة" />
               </div>
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>

@@ -3,6 +3,7 @@ import TafqeetCalculator from "@/components/calculators/TafqeetCalculator";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import FAQSection from "@/components/shared/FAQSection";
 import ShareButtons from "@/components/shared/ShareButtons";
+import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 
@@ -46,6 +47,9 @@ export default function TafqeetPage() {
               <TafqeetCalculator />
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
                 <ShareButtons title="حاسبة التفقيط — تحويل الأرقام إلى كلمات عربية" />
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <EmbedCode url="https://calculator.egypiana.com/financial/tafqeet" title="حاسبة التفقيط — تحويل الأرقام إلى كلمات عربية" />
               </div>
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>

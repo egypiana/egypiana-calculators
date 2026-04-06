@@ -3,6 +3,7 @@ import GPACalculator from "@/components/calculators/GPACalculator";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import FAQSection from "@/components/shared/FAQSection";
 import ShareButtons from "@/components/shared/ShareButtons";
+import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 
@@ -33,6 +34,9 @@ export default function GPAPage() {
             <div className="bg-white dark:bg-[#1E293B] rounded-2xl border border-gray-100 dark:border-gray-700 p-6 shadow-sm">
               <GPACalculator />
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700"><ShareButtons title="حاسبة المعدل التراكمي GPA" /></div>
+              <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <EmbedCode url="https://calculator.egypiana.com/tools/gpa" title="حاسبة المعدل التراكمي GPA" />
+              </div>
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
             <FAQSection faqs={faqs} />

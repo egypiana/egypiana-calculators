@@ -3,6 +3,7 @@ import ZakatCalculator from "@/components/calculators/ZakatCalculator";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import FAQSection from "@/components/shared/FAQSection";
 import ShareButtons from "@/components/shared/ShareButtons";
+import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 
@@ -105,6 +106,9 @@ export default function ZakatPage() {
               <ZakatCalculator />
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
                 <ShareButtons title="حاسبة الزكاة المجانية — احسب زكاة مالك بدقة" />
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <EmbedCode url="https://calculator.egypiana.com/financial/zakat" title="حاسبة الزكاة — احسب زكاة مالك لعام 2025" />
               </div>
             </div>
 

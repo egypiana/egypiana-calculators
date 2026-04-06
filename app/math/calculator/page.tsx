@@ -3,6 +3,7 @@ import StandardCalculator from "@/components/calculators/StandardCalculator";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import FAQSection from "@/components/shared/FAQSection";
 import ShareButtons from "@/components/shared/ShareButtons";
+import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 
@@ -103,6 +104,9 @@ export default function CalculatorPage() {
               {/* Share buttons */}
               <div className="px-6 pb-6">
                 <ShareButtons title="آلة حاسبة اون لاين مجانية — حاسبات إيجيبيانا" />
+              </div>
+              <div className="px-6 pb-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                <EmbedCode url="https://calculator.egypiana.com/math/calculator" title="آلة حاسبة اون لاين — حاسبة عربية مجانية" />
               </div>
             </div>
 
