@@ -53,6 +53,17 @@ export default function EmbedPage({ params }: Props) {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4 flex items-start justify-center">
       <div className="w-full max-w-2xl bg-white dark:bg-[#1E293B] rounded-2xl border border-gray-100 dark:border-gray-700 p-5 shadow-sm">
         <Calculator />
+        <p className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-center text-xs text-gray-400 dark:text-gray-500">
+          بواسطة{" "}
+          <a
+            href="https://calculator.egypiana.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#1E3A8A] dark:text-blue-400 hover:underline"
+          >
+            حاسبات إيجيبيانا
+          </a>
+        </p>
       </div>
     </div>
   );

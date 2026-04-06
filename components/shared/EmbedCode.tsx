@@ -23,9 +23,7 @@ export default function EmbedCode({ url, title = "حاسبة", height = 650 }: E
 
   const embedCode =
     `<iframe src="${embedSrc}" width="100%" height="${height}" frameborder="0" ` +
-    `style="border:1px solid #e5e7eb;border-radius:12px" title="${title}" loading="lazy"></iframe>\n` +
-    `<p style="text-align:center;font-size:12px;margin-top:4px">` +
-    `بواسطة <a href="${url}" target="_blank" rel="noopener noreferrer">حاسبات إيجيبيانا</a></p>`;
+    `style="border:1px solid #e5e7eb;border-radius:12px" title="${title}" loading="lazy"></iframe>`;
 
   const handleCopy = () => {
     // Select the textarea first — most reliable cross-browser method
