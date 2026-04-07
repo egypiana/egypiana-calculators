@@ -173,6 +173,17 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
+
+                {/* ── إيجيبيانا external link ── */}
+                <span className="mx-1 text-white/30 select-none">|</span>
+                <a
+                  href="https://egypiana.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-full text-sm font-black whitespace-nowrap transition-all duration-200 bg-[#F59E0B]/20 text-[#FCD34D] hover:bg-[#F59E0B]/40 hover:text-white border border-[#F59E0B]/30"
+                >
+                  إيجيبيانا ↗
+                </a>
               </nav>
 
               {/* Mobile: site name centered */}
@@ -383,6 +394,18 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
+
+                {/* إيجيبيانا — external, shown below المدونة */}
+                <a
+                  href="https://egypiana.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between px-4 py-3 rounded-xl font-black text-sm bg-[#F59E0B]/20 text-[#FCD34D] hover:bg-[#F59E0B]/30 active:bg-[#F59E0B]/40 border border-[#F59E0B]/30 transition-all"
+                >
+                  <span>إيجيبيانا</span>
+                  <span className="text-xs opacity-70">↗</span>
+                </a>
               </nav>
 
               {/* WhatsApp CTA */}
