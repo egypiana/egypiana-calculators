@@ -65,9 +65,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://calculator.egypiana.com",
+    // Removed en alternate — /en route does not exist yet,
+    // pointing hreflang to a non-existent URL hurts SEO
     languages: {
       ar: "https://calculator.egypiana.com",
-      en: "https://calculator.egypiana.com/en",
     },
   },
   verification: {
@@ -83,12 +84,18 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        {/* Google Fonts — Cairo */}
+        {/* Google Fonts — Cairo (preconnect reduces latency) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        {/* Preload the most common font weight to eliminate FOUT */}
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
@@ -131,6 +138,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        {/* RSS feed discovery — browsers and RSS readers auto-detect this */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="حاسبات إيجيبيانا — المدونة"
+          href="https://calculator.egypiana.com/rss.xml"
+        />
       </head>
       <body className="font-cairo antialiased bg-background min-h-screen flex flex-col">
         <ThemeProvider>
