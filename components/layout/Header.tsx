@@ -102,52 +102,75 @@ export default function Header() {
       <header className="bg-[#1E3A8A] sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* ── 3-column flex: equal side widths → true centre nav ── */}
-          <div className="flex items-center h-16 gap-2">
+          {/* ── 3-zone layout using relative + absolute centering ── */}
+          <div className="relative flex items-center h-16">
 
-            {/* LEFT col (logo) — flex-1 so it matches right col width */}
-            <div className="flex-1 flex items-center gap-3 min-w-0">
-              <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
-                <Calculator className="h-6 w-6 text-white" />
-              </div>
-              <div className="min-w-0">
-                <Link
-                  href="/"
-                  className="text-white font-bold text-lg leading-tight block hover:text-blue-200 transition-colors truncate"
-                >
-                  حاسبات إيجيبيانا
-                </Link>
-                <span className="text-blue-200 text-xs font-light hidden md:block truncate">
-                  {arabicDate}
-                </span>
+            {/* ── LEFT ZONE: hamburger (mobile) | full logo (desktop) ── */}
+            <div className="flex items-center gap-2 z-10 flex-shrink-0">
+              {/* Hamburger — mobile/tablet only */}
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className="lg:hidden p-2 text-white hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="القائمة"
+              >
+                <Menu className="h-5 w-5" />
+              </button>
+
+              {/* Full logo — desktop only */}
+              <div className="hidden lg:flex items-center gap-3">
+                <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
+                  <Calculator className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <Link
+                    href="/"
+                    className="text-white font-bold text-lg leading-tight block hover:text-blue-200 transition-colors"
+                  >
+                    حاسبات إيجيبيانا
+                  </Link>
+                  <span className="text-blue-200 text-xs font-light">
+                    {arabicDate}
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* CENTER col — nav (desktop only) */}
-            <nav className="hidden lg:flex items-center gap-0.5 flex-shrink-0">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all duration-200 whitespace-nowrap ${
-                    isActive(link.href)
-                      ? "bg-white text-[#1E3A8A]"
-                      : "text-white hover:bg-white/20"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            {/* ── CENTER ZONE: absolutely centered (no flex bias) ── */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              {/* Mobile: site name centered */}
+              <Link
+                href="/"
+                className="lg:hidden pointer-events-auto text-white font-bold text-lg hover:text-blue-200 transition-colors"
+              >
+                حاسبات إيجيبيانا
+              </Link>
 
-            {/* RIGHT col — actions */}
-            <div className="flex-1 flex items-center justify-end gap-1.5">
-              {/* WhatsApp CTA — tablet + desktop */}
+              {/* Desktop: nav links centered */}
+              <nav className="hidden lg:flex pointer-events-auto items-center gap-0.5">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all duration-200 whitespace-nowrap ${
+                      isActive(link.href)
+                        ? "bg-white text-[#1E3A8A]"
+                        : "text-white hover:bg-white/20"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* ── RIGHT ZONE: action buttons ── */}
+            <div className="ml-auto flex items-center gap-1.5 z-10 flex-shrink-0">
+              {/* WhatsApp CTA — desktop only */}
               <a
                 href="https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors flex-shrink-0"
+                className="hidden lg:flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 <span className="hidden xl:inline">انضم قناتنا</span>
@@ -169,15 +192,6 @@ export default function Header() {
                 aria-label="تبديل الوضع الليلي"
               >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </button>
-
-              {/* Hamburger — mobile/tablet only */}
-              <button
-                onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2 text-white hover:bg-white/20 rounded-lg transition-colors"
-                aria-label="القائمة"
-              >
-                <Menu className="h-5 w-5" />
               </button>
             </div>
           </div>
@@ -246,7 +260,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* All social icons */}
+          {/* Social icons */}
           <div className="flex items-center gap-1.5 flex-shrink-0">
             {socialLinks.map(({ href, icon: Icon, label, color }) => (
               <a
