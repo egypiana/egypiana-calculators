@@ -140,6 +140,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
      BLOG POSTS
      Generated from actual data — uses each post's real date
   ────────────────────────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────
+     BLOG POSTS
+     Generated from actual data — uses each post's real date
+  ────────────────────────────────────────────────────────── */
   const blogPosts: MetadataRoute.Sitemap = ALL_POSTS.map((post) => ({
     url: `${BASE_URL}/blog/${encodeURIComponent(post.slug)}`,
     lastModified: post.date,

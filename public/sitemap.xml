@@ -456,4 +456,25 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://calculator.egypiana.com/blog/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://calculator.egypiana.com/blog/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://calculator.egypiana.com/blog/%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D8%A8%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%A8%D9%8A%D8%B9-%D9%88%D8%A7%D9%84%D8%A3%D8%B4%D9%87%D8%B1</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
