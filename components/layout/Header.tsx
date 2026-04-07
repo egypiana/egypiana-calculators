@@ -218,7 +218,7 @@ export default function Header() {
           {/* Social Icons */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <a
-              href="https://youtube.com/@egypiana"
+              href="https://www.youtube.com/@egypiana"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-red-200 transition-colors"
