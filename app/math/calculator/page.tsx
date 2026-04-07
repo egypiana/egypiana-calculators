@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -236,6 +238,7 @@ export default function CalculatorPage() {
             <RelatedCalculators calculators={relatedCalcs} />
 
             {/* ADSENSE SIDEBAR LARGE START */}
+            <FeaturedArticles />
             <AdBlock format="half-page" /* slot="..." publisherId="..." */ />
             {/* ADSENSE SIDEBAR LARGE END */}
           </aside>

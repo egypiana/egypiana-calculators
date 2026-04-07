@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function AreaPage() {
               {label:"الآلة الحاسبة العلمية",href:"/math/scientific",icon:"🔬",description:"دوال رياضية"},
               {label:"حاسبة النسبة المئوية",href:"/math/percentage",icon:"💯",description:"احتساب النسب"},
             ]} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>

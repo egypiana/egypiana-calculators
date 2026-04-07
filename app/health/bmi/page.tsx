@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -84,6 +86,7 @@ export default function BMIPage() {
           <aside className="space-y-6">
             <AdBlock format="rectangle" />
             <RelatedCalculators calculators={relatedCalcs} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>

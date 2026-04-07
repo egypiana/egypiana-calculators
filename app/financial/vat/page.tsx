@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function VATPage() {
               {label:"التفقيط",href:"/financial/tafqeet",icon:"📝",description:"كتابة المبالغ"},
               {label:"حاسبة القرض",href:"/financial/loan",icon:"🏦",description:"أقساط القرض"},
             ]} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>

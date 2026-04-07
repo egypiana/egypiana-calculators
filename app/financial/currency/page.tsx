@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function CurrencyPage() {
               {label:"حاسبة الراتب الصافي",href:"/financial/salary",icon:"💵",description:"صافي الراتب"},
               {label:"حاسبة الفائدة المركبة",href:"/financial/compound-interest",icon:"📈",description:"نمو الاستثمار"},
             ]} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>

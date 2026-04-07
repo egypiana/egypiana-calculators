@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function PregnancyPage() {
               {label:"حاسبة شرب الماء",href:"/health/water-intake",icon:"💧",description:"كميتك من الماء"},
               {label:"حاسبة العمر",href:"/tools/age",icon:"🎂",description:"عمرك بالتفصيل"},
             ]} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>

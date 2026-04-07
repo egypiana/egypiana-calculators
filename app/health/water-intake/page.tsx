@@ -10,6 +10,8 @@ import CalcSEOContent from "@/components/shared/CalcSEOContent";
 import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
 
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
+import FeaturedArticles from "@/components/shared/FeaturedArticles";
+
 
 
 export const metadata: Metadata = {
@@ -60,6 +62,7 @@ export default function WaterIntakePage() {
               {label:"حاسبة الوزن المثالي",href:"/health/ideal-weight",icon:"🎯",description:"وزنك المثالي"},
               {label:"حاسبة الحمل",href:"/health/pregnancy",icon:"🤰",description:"موعد الولادة"},
             ]} />
+            <FeaturedArticles />
             <AdBlock format="half-page" />
           </aside>
         </div>
