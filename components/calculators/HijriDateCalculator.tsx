@@ -16,13 +16,13 @@ const ARABIC_WEEKDAYS = [
   "الخميس", "الجمعة", "السبت",
 ];
 
-// Approximate dates for Islamic events in 2025
-const ISLAMIC_EVENTS_2025: Array<{ name: string; approxGregorian: string }> = [
-  { name: "رمضان 1446", approxGregorian: "2025-03-01" },
-  { name: "عيد الفطر 1446", approxGregorian: "2025-03-31" },
-  { name: "عيد الأضحى 1446", approxGregorian: "2025-06-07" },
-  { name: "رأس السنة الهجرية 1447", approxGregorian: "2025-06-27" },
-  { name: "المولد النبوي 1447", approxGregorian: "2025-09-05" },
+// Approximate dates for Islamic events in 2026 (1447 هـ)
+const ISLAMIC_EVENTS_2026: Array<{ name: string; approxGregorian: string }> = [
+  { name: "رمضان 1447",           approxGregorian: "2026-02-18" },
+  { name: "عيد الفطر 1447",       approxGregorian: "2026-03-20" },
+  { name: "عيد الأضحى 1447",      approxGregorian: "2026-05-27" },
+  { name: "رأس السنة الهجرية 1448", approxGregorian: "2026-06-17" },
+  { name: "المولد النبوي 1448",    approxGregorian: "2026-08-26" },
 ];
 
 export default function HijriDateCalculator() {
@@ -48,7 +48,7 @@ export default function HijriDateCalculator() {
 
     // Calculate days until events
     const now = today.getTime();
-    const eventsList = ISLAMIC_EVENTS_2025.map((ev) => {
+    const eventsList = ISLAMIC_EVENTS_2026.map((ev) => {
       const evDate = new Date(ev.approxGregorian);
       const daysLeft = Math.ceil((evDate.getTime() - now) / (1000 * 60 * 60 * 24));
       return {
@@ -209,7 +209,7 @@ export default function HijriDateCalculator() {
       {events.length > 0 && (
         <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
           <p className="px-4 py-3 font-bold text-[#1E293B] dark:text-white border-b border-gray-100 dark:border-gray-700 text-sm">
-            📅 المناسبات الإسلامية القادمة (2025)
+            📅 المناسبات الإسلامية القادمة (2026)
           </p>
           <ul className="divide-y divide-gray-100 dark:divide-gray-700">
             {events.slice(0, 5).map((ev) => (

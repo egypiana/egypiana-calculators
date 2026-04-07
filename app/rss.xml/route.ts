@@ -29,7 +29,7 @@ export async function GET() {
     <link>${baseUrl}</link>
     <description><![CDATA[مقالات ونصائح مالية وصحية وعملية من حاسبات إيجيبيانا — أكثر من 40 حاسبة مجانية]]></description>
     <language>ar</language>
-    <copyright>© 2025 حاسبات إيجيبيانا</copyright>
+    <copyright>© 2026 حاسبات إيجيبيانا</copyright>
     <managingEditor>info@egypiana.com</managingEditor>
     <webMaster>info@egypiana.com</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>

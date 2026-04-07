@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-4xl mx-auto px-4 py-10">
         <h1 className="text-3xl font-black text-[#1E293B] dark:text-white mb-6 text-right">سياسة الخصوصية</h1>
         <div className="prose prose-lg max-w-none text-right space-y-6 text-gray-700 dark:text-gray-300">
-          <p>آخر تحديث: يناير 2025</p>
+          <p>آخر تحديث: يناير 2026</p>
 
           <section>
             <h2 className="text-xl font-bold text-[#1E293B] dark:text-white">١. المعلومات التي نجمعها</h2>

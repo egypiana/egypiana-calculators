@@ -6,7 +6,7 @@ import { formatNumber } from "@/lib/utils";
 import { trackCalculatorUsed } from "@/components/analytics/GoogleAnalytics";
 
 // Nisab = 85g of gold. Gold price in EGP (update periodically or fetch from API)
-// Default: ~4,200 EGP/g as of 2025 (adjust as needed)
+// Default: ~4,200 EGP/g as of 2026 (adjust as needed)
 const GOLD_PRICE_PER_GRAM_EGP = 4200;
 const NISAB_GRAMS = 85;
 const ZAKAT_RATE = 0.025; // 2.5%

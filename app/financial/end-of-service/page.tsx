@@ -15,7 +15,7 @@ import FeaturedArticles from "@/components/shared/FeaturedArticles";
 
 
 export const metadata: Metadata = {
-  title: "حاسبة نهاية الخدمة — السعودية والإمارات ومصر 2025",
+  title: "حاسبة نهاية الخدمة — السعودية والإمارات ومصر 2026",
   description:
     "احسب مكافأة نهاية الخدمة بدقة للسعودية والإمارات ومصر والكويت. تشمل جميع حالات الاستقالة والإنهاء والتقاعد مع شرح تفصيلي للقانون.",
   keywords: ALL_CALC_SEO["end-of-service"].keywords,

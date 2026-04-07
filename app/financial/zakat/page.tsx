@@ -15,7 +15,7 @@ import FeaturedArticles from "@/components/shared/FeaturedArticles";
 
 
 export const metadata: Metadata = {
-  title: "حاسبة الزكاة — احسب زكاة مالك بدقة لعام 2025",
+  title: "حاسبة الزكاة — احسب زكاة مالك بدقة لعام 2026",
   description:
     "حاسبة الزكاة المجانية — احسب زكاة النقود والذهب والفضة والأسهم بدقة بناءً على نصاب الذهب الحالي. تحقق إذا كنت مستحقاً لإخراج الزكاة.",
   keywords: ALL_CALC_SEO["zakat"].keywords,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://calculator.egypiana.com/financial/zakat",
   },
   openGraph: {
-    title: "حاسبة الزكاة — احسب زكاة مالك لعام 2025",
+    title: "حاسبة الزكاة — احسب زكاة مالك لعام 2026",
     description: "احسب زكاة مالك بدقة بناءً على نصاب الذهب الحالي",
     url: "https://calculator.egypiana.com/financial/zakat",
   },
@@ -93,7 +93,7 @@ export default function ZakatPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl md:text-4xl font-black text-[#1E293B] dark:text-white mb-2 text-right">
-          حاسبة الزكاة — احسب زكاة مالك لعام 2025
+          حاسبة الزكاة — احسب زكاة مالك لعام 2026
         </h1>
         <p className="text-gray-500 dark:text-gray-400 mb-8 text-right">
           احسب زكاة النقود والذهب والفضة والأسهم بناءً على نصاب الذهب الحالي
@@ -107,7 +107,7 @@ export default function ZakatPage() {
                 <ShareButtons title="حاسبة الزكاة المجانية — احسب زكاة مالك بدقة" />
               </div>
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
-                <EmbedCode url="https://calculator.egypiana.com/financial/zakat" title="حاسبة الزكاة — احسب زكاة مالك لعام 2025" />
+                <EmbedCode url="https://calculator.egypiana.com/financial/zakat" title="حاسبة الزكاة — احسب زكاة مالك لعام 2026" />
               </div>
             </div>
 
