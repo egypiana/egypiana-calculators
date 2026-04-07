@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,15 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة الزكاة — احسب زكاة مالك بدقة لعام 2025",
   description:
     "حاسبة الزكاة المجانية — احسب زكاة النقود والذهب والفضة والأسهم بدقة بناءً على نصاب الذهب الحالي. تحقق إذا كنت مستحقاً لإخراج الزكاة.",
-  keywords: [
-    "حاسبة الزكاة",
-    "حساب الزكاة",
-    "كم زكاة مالي",
-    "زكاة المال",
-    "نصاب الزكاة",
-    "زكاة الذهب",
-    "زكاة 2025",
-  ],
+  keywords: ALL_CALC_SEO["zakat"].keywords,
   alternates: {
     canonical: "https://calculator.egypiana.com/financial/zakat",
   },
@@ -202,6 +196,10 @@ export default function ZakatPage() {
             </section>
 
                         <CalcSEOContent data={ALL_CALC_SEO["zakat"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["zakat"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

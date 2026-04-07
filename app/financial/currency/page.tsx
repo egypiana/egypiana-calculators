@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "محول العملات العربية — دولار يورو ريال جنيه درهم",
   description: "حوّل بين العملات العربية والعالمية: الجنيه المصري، الريال السعودي، الدرهم الإماراتي، الدولار، اليورو وأكثر.",
-  keywords: ["محول العملات","سعر الدولار","سعر الريال","الجنيه المصري","تحويل العملات"],
+  keywords: ALL_CALC_SEO["currency"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/currency" },
 };
 
@@ -43,6 +45,10 @@ export default function CurrencyPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["currency"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["currency"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

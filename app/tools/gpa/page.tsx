@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة المعدل التراكمي GPA — نظام 4 و5 و100",
   description: "احسب معدلك التراكمي GPA بسهولة. يدعم نظام 4.0 و5.0 ونظام 100 درجة. أضف موادك وساعاتها المعتمدة.",
-  keywords: ["حاسبة المعدل التراكمي","GPA","معدل الترم","الدرجات","ساعات معتمدة"],
+  keywords: ALL_CALC_SEO["gpa"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/gpa" },
 };
 
@@ -43,6 +45,10 @@ export default function GPAPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["gpa"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["gpa"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

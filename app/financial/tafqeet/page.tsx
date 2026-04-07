@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة التفقيط — تحويل الأرقام إلى كلمات بالعربي",
   description:
     "أداة التفقيط المجانية — حوّل أي رقم إلى كتابة بالعربية. تدعم الجنيه المصري والريال السعودي والدرهم والدينار والدولار. مثالية للشيكات والعقود.",
-  keywords: ["تفقيط", "التفقيط", "تفقيط الأرقام", "تحويل الأرقام لكلمات", "تفقيط الشيك", "كتابة المبالغ"],
+  keywords: ALL_CALC_SEO["tafqeet"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/tafqeet" },
 };
 
@@ -57,6 +59,10 @@ export default function TafqeetPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["tafqeet"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["tafqeet"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,13 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة نهاية الخدمة — السعودية والإمارات ومصر 2025",
   description:
     "احسب مكافأة نهاية الخدمة بدقة للسعودية والإمارات ومصر والكويت. تشمل جميع حالات الاستقالة والإنهاء والتقاعد مع شرح تفصيلي للقانون.",
-  keywords: [
-    "حاسبة نهاية الخدمة",
-    "مكافأة نهاية الخدمة",
-    "حساب مكافأة نهاية الخدمة",
-    "نهاية الخدمة السعودية",
-    "نهاية الخدمة الإمارات",
-  ],
+  keywords: ALL_CALC_SEO["end-of-service"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/end-of-service" },
 };
 
@@ -78,6 +74,10 @@ export default function EndOfServicePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["end-of-service"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["end-of-service"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

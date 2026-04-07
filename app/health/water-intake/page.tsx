@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة شرب الماء اليومي — كميتك المثالية",
   description: "احسب كميتك اليومية المثالية من الماء بناءً على وزنك ومستوى نشاطك والمناخ. تجنب الجفاف وحافظ على صحتك.",
-  keywords: ["حاسبة شرب الماء","كمية الماء اليومية","الترطيب","الجفاف","مياه"],
+  keywords: ALL_CALC_SEO["water-intake"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/water-intake" },
 };
 
@@ -43,6 +45,10 @@ export default function WaterIntakePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["water-intake"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["water-intake"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

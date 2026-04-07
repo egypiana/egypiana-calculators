@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   title: "آلة حاسبة اون لاين — حاسبة عربية مجانية",
   description:
     "آلة حاسبة اون لاين مجانية باللغة العربية. احسب الجمع والطرح والضرب والقسمة والنسب المئوية بسهولة ودقة من هاتفك أو كمبيوترك.",
-  keywords: ["آلة حاسبة", "حاسبة اون لاين", "حاسبة عربية", "حاسبة مجانية", "calculator"],
+  keywords: ALL_CALC_SEO["calculator"].keywords,
   alternates: {
     canonical: "https://calculator.egypiana.com/math/calculator",
   },
@@ -217,6 +219,10 @@ export default function CalculatorPage() {
 
             {/* FAQ */}
                         <CalcSEOContent data={ALL_CALC_SEO["calculator"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["calculator"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

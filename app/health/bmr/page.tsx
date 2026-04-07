@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة معدل الأيض BMR وTDEE — السعرات اليومية",
   description: "احسب معدل الأيض الأساسي (BMR) وإجمالي سعراتك اليومية (TDEE) بناءً على وزنك وطولك وعمرك ونشاطك.",
-  keywords: ["حاسبة BMR","معدل الأيض","TDEE","السعرات الحرارية","حمية"],
+  keywords: ALL_CALC_SEO["bmr"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/bmr" },
 };
 
@@ -43,6 +45,10 @@ export default function BMRPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["bmr"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["bmr"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

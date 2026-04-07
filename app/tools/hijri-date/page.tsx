@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,13 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة التاريخ الهجري — تحويل التاريخ الميلادي والهجري",
   description:
     "حوّل التاريخ بين الميلادي والهجري مجاناً. اعرف تاريخ اليوم بالهجري، وموعد رمضان وعيد الفطر وعيد الأضحى 2025. أداة التحويل الأدق.",
-  keywords: [
-    "حاسبة التاريخ الهجري",
-    "تحويل التاريخ",
-    "الهجري الميلادي",
-    "تاريخ اليوم بالهجري",
-    "رمضان 2025",
-  ],
+  keywords: ALL_CALC_SEO["hijri-date"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/hijri-date" },
 };
 
@@ -78,6 +74,10 @@ export default function HijriDatePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["hijri-date"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["hijri-date"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

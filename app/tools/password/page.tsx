@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "مولّد كلمات المرور القوية — آمن ومجاني",
   description: "أنشئ كلمات مرور قوية وآمنة بضغطة زر. تحكم في الطول والأحرف والرموز. يقيّم قوة كلمة مرورك فورياً.",
-  keywords: ["مولد كلمات المرور","كلمة مرور قوية","أمان الحساب","password generator"],
+  keywords: ALL_CALC_SEO["password"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/password" },
 };
 
@@ -43,6 +45,10 @@ export default function PasswordPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["password"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["password"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

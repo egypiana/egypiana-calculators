@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الوزن المثالي — لطولك وعمرك وجنسك",
   description: "احسب وزنك المثالي بناءً على طولك باستخدام معادلات Robinson وMiller وDevine. اعرف النطاق الصحي لوزنك.",
-  keywords: ["حاسبة الوزن المثالي","وزن مثالي","نطاق الوزن الصحي","Robinson","Devine"],
+  keywords: ALL_CALC_SEO["ideal-weight"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/ideal-weight" },
 };
 
@@ -43,6 +45,10 @@ export default function IdealWeightPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["ideal-weight"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["ideal-weight"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

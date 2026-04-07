@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,14 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة الميراث الشرعي — توزيع التركة وفق الشريعة الإسلامية",
   description:
     "حاسبة الميراث الشرعي المجانية — وزّع التركة وفق أحكام الشريعة الإسلامية. تشمل الزوج والزوجة والأبناء والبنات والأب والأم والإخوة مع شرح مفصل.",
-  keywords: [
-    "حاسبة الميراث",
-    "حساب الميراث",
-    "الميراث الشرعي",
-    "حاسبة الإرث",
-    "توزيع التركة",
-    "الإرث الإسلامي",
-  ],
+  keywords: ALL_CALC_SEO["inheritance"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/inheritance" },
 };
 
@@ -64,6 +59,10 @@ export default function InheritancePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["inheritance"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["inheritance"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

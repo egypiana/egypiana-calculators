@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة النسبة المئوية — جميع أنواع حسابات النسب",
   description: "احسب النسب المئوية بسهولة: نسبة من رقم، ما نسبة X من Y، نسبة التغير، إضافة أو طرح نسبة. 5 أوضاع احتساب.",
-  keywords: ["حاسبة النسبة المئوية","النسب المئوية","نسبة التغير","خصم","زيادة"],
+  keywords: ALL_CALC_SEO["percentage"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/math/percentage" },
 };
 
@@ -43,6 +45,10 @@ export default function PercentagePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["percentage"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["percentage"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

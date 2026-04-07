@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة السعرات الحرارية اليومية — TDEE والتغذية",
   description: "احسب احتياجك اليومي من السعرات الحرارية بناءً على وزنك وطولك وعمرك ومستوى نشاطك. خطط لحمية غذائية صحية.",
-  keywords: ["حاسبة السعرات الحرارية","TDEE","BMR","حمية غذائية","إنقاص الوزن"],
+  keywords: ALL_CALC_SEO["calories"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/calories" },
 };
 
@@ -43,6 +45,10 @@ export default function CaloriesPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["calories"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["calories"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الوقت — الفرق بين تاريخين وتحويل الوحدات",
   description: "احسب الفرق بين تاريخين بالأيام والساعات، أضف أو اطرح وقتاً من تاريخ، وحوّل بين وحدات الزمن.",
-  keywords: ["حاسبة الوقت","الفرق بين تاريخين","تحويل وحدات الزمن","أيام ساعات دقائق"],
+  keywords: ALL_CALC_SEO["time"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/time" },
 };
 
@@ -43,6 +45,10 @@ export default function TimePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["time"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["time"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

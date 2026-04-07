@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة المساحة والمحيط — مستطيل دائرة مثلث وأكثر",
   description: "احسب مساحة ومحيط جميع الأشكال الهندسية: مستطيل، مربع، دائرة، مثلث، شبه منحرف، متوازي أضلاع.",
-  keywords: ["حاسبة المساحة","مساحة المستطيل","مساحة الدائرة","مساحة المثلث","المحيط"],
+  keywords: ALL_CALC_SEO["area"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/area" },
 };
 
@@ -43,6 +45,10 @@ export default function AreaPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["area"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["area"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

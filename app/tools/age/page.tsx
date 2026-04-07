@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,13 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة العمر — احسب عمرك بالسنوات والأشهر والأيام",
   description:
     "حاسبة العمر المجانية — احسب عمرك الدقيق بالسنوات والأشهر والأيام والأسابيع. اعرف يوم ميلادك وعدد الأيام المتبقية لعيد ميلادك القادم.",
-  keywords: [
-    "حاسبة العمر",
-    "حساب العمر",
-    "كم عمري",
-    "حاسبة عمري بالسنوات",
-    "age calculator arabic",
-  ],
+  keywords: ALL_CALC_SEO["age"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/age" },
 };
 
@@ -78,6 +74,10 @@ export default function AgePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["age"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["age"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

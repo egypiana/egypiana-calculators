@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة استهلاك الوقود — تكلفة الرحلة والمسافة",
   description: "احسب استهلاك وقود سيارتك، تكلفة رحلتك، والمسافة التي تقطعها بخزان كامل. وفّر المال وخطط رحلاتك.",
-  keywords: ["حاسبة الوقود","استهلاك الوقود","تكلفة الرحلة","بنزين","لتر لكل 100 كم"],
+  keywords: ALL_CALC_SEO["fuel"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/fuel" },
 };
 
@@ -43,6 +45,10 @@ export default function FuelPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["fuel"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["fuel"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الخرسانة — كميات الأسمنت والرمل والزلط",
   description: "احسب كميات مواد الخرسانة المطلوبة: أسمنت، رمل، زلط، ماء. يدعم البلاطات والأعمدة والأسس والسلالم.",
-  keywords: ["حاسبة الخرسانة","كميات البناء","أسمنت رمل زلط","خلطة خرسانة","حسابات البناء"],
+  keywords: ALL_CALC_SEO["concrete"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/concrete" },
 };
 
@@ -43,6 +45,10 @@ export default function ConcretePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["concrete"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["concrete"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

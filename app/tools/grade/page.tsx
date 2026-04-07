@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة المعدل والدرجات — متوسط موزون بالمواد",
   description: "احسب متوسط درجاتك الدراسية الموزون وتقديرك الحرفي. اعرف الدرجة المطلوبة في المواد المتبقية لتحقيق هدفك.",
-  keywords: ["حاسبة المعدل","متوسط الدرجات","التقدير الحرفي","درجات الطالب"],
+  keywords: ALL_CALC_SEO["grade"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/grade" },
 };
 
@@ -43,6 +45,10 @@ export default function GradePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["grade"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["grade"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

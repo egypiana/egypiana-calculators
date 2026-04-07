@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "محول الوحدات — طول، وزن، حرارة، مساحة، حجم، سرعة",
   description: "حوّل بين جميع وحدات القياس: الطول، الوزن، درجة الحرارة، المساحة، الحجم، السرعة. نتائج دقيقة فورية.",
-  keywords: ["محول الوحدات","تحويل المقاييس","كيلومتر ميل","كيلوجرام رطل","درجة مئوية فهرنهايت"],
+  keywords: ALL_CALC_SEO["unit-converter"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/tools/unit-converter" },
 };
 
@@ -43,6 +45,10 @@ export default function UnitConverterPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["unit-converter"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["unit-converter"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

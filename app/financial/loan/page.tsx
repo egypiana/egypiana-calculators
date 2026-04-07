@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,14 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة القرض والأقساط الشهرية — احسب قسطك مجاناً",
   description:
     "حاسبة القرض المجانية — احسب القسط الشهري وإجمالي الفوائد وجدول السداد لأي قرض بنكي أو تمويل شخصي أو رهن عقاري. سريعة ودقيقة.",
-  keywords: [
-    "حاسبة القرض",
-    "حساب الأقساط",
-    "قسط القرض الشهري",
-    "حاسبة القرض البنكي",
-    "حاسبة الأقساط",
-    "جدول سداد القرض",
-  ],
+  keywords: ALL_CALC_SEO["loan"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/loan" },
 };
 
@@ -98,6 +93,10 @@ export default function LoanPage() {
               </ol>
             </section>
                         <CalcSEOContent data={ALL_CALC_SEO["loan"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["loan"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

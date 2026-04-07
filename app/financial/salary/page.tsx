@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الراتب الصافي — بعد الضرائب والتأمينات",
   description: "احسب راتبك الصافي بعد خصم التأمينات الاجتماعية وضريبة الدخل في مصر والسعودية والإمارات. نتيجة دقيقة فورية.",
-  keywords: ["حاسبة الراتب","صافي الراتب","ضريبة الدخل","التأمين الاجتماعي","GOSI"],
+  keywords: ALL_CALC_SEO["salary"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/salary" },
 };
 
@@ -43,6 +45,10 @@ export default function SalaryPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["salary"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["salary"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

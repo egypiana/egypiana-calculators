@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة القرض العقاري — القسط الشهري والإجمالي",
   description: "احسب قسطك الشهري للرهن العقاري بناءً على سعر العقار والدفعة الأولى ومدة القرض وسعر الفائدة.",
-  keywords: ["حاسبة القرض العقاري","الرهن العقاري","قسط شهري","تمويل عقاري","mortgage"],
+  keywords: ALL_CALC_SEO["mortgage"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/mortgage" },
 };
 
@@ -43,6 +45,10 @@ export default function MortgagePage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["mortgage"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["mortgage"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

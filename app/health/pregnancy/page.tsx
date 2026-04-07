@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الحمل — موعد الولادة والأسبوع الحالي",
   description: "احسبي موعد الولادة المتوقع وعمر الجنين بالأسابيع والأشهر والأرباع. تتبعي مراحل الحمل الثلاثة وأبرز المعالم.",
-  keywords: ["حاسبة الحمل","موعد الولادة","عمر الجنين","أسبوع الحمل","مراحل الحمل"],
+  keywords: ALL_CALC_SEO["pregnancy"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/pregnancy" },
 };
 
@@ -43,6 +45,10 @@ export default function PregnancyPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["pregnancy"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["pregnancy"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

@@ -7,6 +7,8 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
@@ -14,14 +16,7 @@ export const metadata: Metadata = {
   title: "حاسبة BMI — مؤشر كتلة الجسم للرجال والنساء",
   description:
     "احسب مؤشر كتلة الجسم BMI مجاناً للرجال والنساء. تعرف على وزنك المثالي وتصنيف وزنك (نقص — طبيعي — زيادة — سمنة) مع شرح مفصل.",
-  keywords: [
-    "حاسبة BMI",
-    "مؤشر كتلة الجسم",
-    "حساب BMI",
-    "الوزن المثالي",
-    "حاسبة الوزن",
-    "BMI عربي",
-  ],
+  keywords: ALL_CALC_SEO["bmi"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/health/bmi" },
 };
 
@@ -79,6 +74,10 @@ export default function BMIPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["bmi"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["bmi"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

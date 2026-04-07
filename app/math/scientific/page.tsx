@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "الآلة الحاسبة العلمية — sin cos tan log جذر تربيعي",
   description: "آلة حاسبة علمية متكاملة تدعم المثلثات، اللوغاريتمات، الأس، القوى، الذاكرة، وأوضاع درجة/راديان.",
-  keywords: ["آلة حاسبة علمية","حاسبة علمية","sin cos tan","جذر تربيعي","لوغاريتم"],
+  keywords: ALL_CALC_SEO["scientific"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/math/scientific" },
 };
 
@@ -43,6 +45,10 @@ export default function ScientificPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["scientific"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["scientific"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة ضريبة القيمة المضافة VAT — إضافة واستخراج الضريبة",
   description: "احسب ضريبة القيمة المضافة بسهولة — أضف الضريبة على المبلغ أو استخرجها منه. يدعم نسب 5% و15% و20% وأي نسبة مخصصة.",
-  keywords: ["حاسبة ضريبة القيمة المضافة","VAT","ضريبة المبيعات","حساب الضريبة"],
+  keywords: ALL_CALC_SEO["vat"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/vat" },
 };
 
@@ -43,6 +45,10 @@ export default function VATPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["vat"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["vat"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

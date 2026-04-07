@@ -7,13 +7,15 @@ import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
 import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import AlsoKnownAs from "@/components/shared/AlsoKnownAs";
+
 import { ALL_CALC_SEO } from "@/lib/calc-seo";
 
 
 export const metadata: Metadata = {
   title: "حاسبة الفائدة المركبة — نمو الاستثمار والادخار",
   description: "احسب نمو استثمارك مع الفائدة المركبة. أدخل رأس المال والإضافات الشهرية ونسبة العائد لترى جدول النمو السنوي.",
-  keywords: ["الفائدة المركبة","حاسبة الاستثمار","نمو المدخرات","العائد على الاستثمار","compound interest"],
+  keywords: ALL_CALC_SEO["compound-interest"].keywords,
   alternates: { canonical: "https://calculator.egypiana.com/financial/compound-interest" },
 };
 
@@ -43,6 +45,10 @@ export default function CompoundInterestPage() {
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
                         <CalcSEOContent data={ALL_CALC_SEO["compound-interest"]} />
+
+            <AlsoKnownAs keywords={ALL_CALC_SEO["compound-interest"].keywords} />
+
+            
 
             <FAQSection faqs={faqs} />
           </div>

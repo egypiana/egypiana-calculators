@@ -142,6 +142,22 @@ export function parseArabicNumber(str: string): number {
   return parseFloat(normalized);
 }
 
+/**
+ * Normalize Arabic text for fuzzy search comparison.
+ * Unifies alef variants, taa marbuta/haa, yaa variants,
+ * removes tashkeel, and trims whitespace.
+ */
+export function normalizeArabic(text: string): string {
+  return text
+    .replace(/[أإآا]/g, "ا")       // توحيد الألف
+    .replace(/[ةه]/g, "ه")          // توحيد الهاء والتاء المربوطة
+    .replace(/[يى]/g, "ي")          // توحيد الياء
+    .replace(/[ًٌٍَُِّْ]/g, "")     // إزالة التشكيل
+    .replace(/\s+/g, " ")           // توحيد المسافات
+    .trim()
+    .toLowerCase();
+}
+
 /** Round to specified decimal places */
 export function round(value: number, decimals: number): number {
   return Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
