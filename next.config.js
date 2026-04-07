@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// blog: 20 Arabic articles live at /blog
 const nextConfig = {
   reactStrictMode: true,
   images: {
