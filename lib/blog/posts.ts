@@ -73,7 +73,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح المالية والإسلامية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح المالية والإسلامية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -143,7 +143,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح المالية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح المالية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -215,7 +215,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح الصحة واللياقة", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح الصحة واللياقة", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -291,7 +291,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح التغذية واللياقة", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح التغذية واللياقة", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -364,7 +364,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح المالية والوظيفية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح المالية والوظيفية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -436,7 +436,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح العقارية والمالية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح العقارية والمالية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -500,7 +500,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح اللياقة والصحة", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح اللياقة والصحة", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -562,7 +562,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح الاستثمارية والمالية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح الاستثمارية والمالية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -630,7 +630,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح الوظيفية والقانونية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح الوظيفية والقانونية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -705,7 +705,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح التغذية واللياقة", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح التغذية واللياقة", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -769,7 +769,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح التعليمية والرياضيات", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح التعليمية والرياضيات", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -834,7 +834,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح المالية للأعمال", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح المالية للأعمال", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -902,7 +902,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح الشرعية والفقهية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح الشرعية والفقهية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -957,7 +957,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للمعلومات الإسلامية والعملية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للمعلومات الإسلامية والعملية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1012,7 +1012,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح السيارات والتوفير", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح السيارات والتوفير", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1067,7 +1067,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح الأكاديمية والتعليمية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح الأكاديمية والتعليمية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1121,7 +1121,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح الصحة والعافية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح الصحة والعافية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1174,7 +1174,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للأدوات والنصائح العملية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للأدوات والنصائح العملية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1237,7 +1237,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا لنصائح صحة الأم والطفل", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا لنصائح صحة الأم والطفل", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },
@@ -1301,7 +1301,7 @@ export const ALL_POSTS: BlogPost[] = [
       },
       {
         isWhatsApp: true,
-        content: ["انضم لقناة إيجيبيانا للنصائح التعليمية والأكاديمية", "https://wa.me/channel/egypiana"],
+        content: ["انضم لقناة إيجيبيانا للنصائح التعليمية والأكاديمية", "https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"],
       },
     ],
   },

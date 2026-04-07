@@ -164,7 +164,7 @@ export default function BlogPage({
                 انضم لقناتنا للحصول على نصائح مالية وصحية مجاناً
               </p>
               <a
-                href="https://wa.me/channel/egypiana"
+                href="https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center bg-[#25D366] hover:bg-[#20bd5a] text-white text-sm font-bold py-2.5 rounded-xl transition-colors"
