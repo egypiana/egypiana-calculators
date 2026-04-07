@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Search, Star, ArrowLeft, CheckCircle } from "lucide-react";
 import AdBlock from "@/components/ads/AdBlock";
+import HomeFeaturedArticles from "@/components/shared/HomeFeaturedArticles";
 
 export const metadata: Metadata = {
   title: "حاسبات إيجيبيانا — أفضل الحاسبات العربية المجانية",
@@ -412,6 +413,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Featured Articles ── */}
+      <HomeFeaturedArticles />
     </>
   );
 }
