@@ -6,6 +6,9 @@ import ShareButtons from "@/components/shared/ShareButtons";
 import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
+import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import { ALL_CALC_SEO } from "@/lib/calc-seo";
+
 
 export const metadata: Metadata = {
   title: "الآلة الحاسبة العلمية — sin cos tan log جذر تربيعي",
@@ -39,6 +42,8 @@ export default function ScientificPage() {
               </div>
             </div>
             <div className="flex justify-center"><AdBlock format="leaderboard" /></div>
+                        <CalcSEOContent data={ALL_CALC_SEO["scientific"]} />
+
             <FAQSection faqs={faqs} />
           </div>
           <aside className="space-y-6">

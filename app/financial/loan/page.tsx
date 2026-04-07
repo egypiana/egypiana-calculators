@@ -6,6 +6,9 @@ import ShareButtons from "@/components/shared/ShareButtons";
 import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
+import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import { ALL_CALC_SEO } from "@/lib/calc-seo";
+
 
 export const metadata: Metadata = {
   title: "حاسبة القرض والأقساط الشهرية — احسب قسطك مجاناً",
@@ -94,6 +97,8 @@ export default function LoanPage() {
                 ))}
               </ol>
             </section>
+                        <CalcSEOContent data={ALL_CALC_SEO["loan"]} />
+
             <FAQSection faqs={faqs} />
           </div>
           <aside className="space-y-6">

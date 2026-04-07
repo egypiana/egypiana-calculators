@@ -6,6 +6,9 @@ import ShareButtons from "@/components/shared/ShareButtons";
 import EmbedCode from "@/components/shared/EmbedCode";
 import RelatedCalculators from "@/components/shared/RelatedCalculators";
 import AdBlock from "@/components/ads/AdBlock";
+import CalcSEOContent from "@/components/shared/CalcSEOContent";
+import { ALL_CALC_SEO } from "@/lib/calc-seo";
+
 
 export const metadata: Metadata = {
   title: "حاسبة الزكاة — احسب زكاة مالك بدقة لعام 2025",
@@ -197,6 +200,8 @@ export default function ZakatPage() {
                 ))}
               </div>
             </section>
+
+                        <CalcSEOContent data={ALL_CALC_SEO["zakat"]} />
 
             <FAQSection faqs={faqs} />
           </div>
