@@ -185,19 +185,30 @@ export default function Header() {
             </div>
 
             {/* ── COL C (right) — logo ── */}
-            <div className="flex items-center gap-3 justify-end" dir="rtl">
-              <div className="min-w-0 hidden lg:block text-right">
-                <Link
-                  href="/"
-                  className="text-white font-bold text-lg leading-tight block hover:text-blue-200 transition-colors whitespace-nowrap"
-                >
-                  حاسبات إيجيبيانا
-                </Link>
-                <span className="text-blue-200 text-xs font-light whitespace-nowrap">
-                  {arabicDate}
-                </span>
-              </div>
-              <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
+            <div className="flex items-center justify-end">
+              {/* Desktop: icon + text as one clickable unit */}
+              {/* dir="rtl" → first child (icon) sits on the RIGHT, text sits to its LEFT */}
+              <Link
+                href="/"
+                className="hidden lg:flex items-center gap-2 hover:opacity-90 transition-opacity"
+                dir="rtl"
+              >
+                {/* Icon — first in RTL flow → rightmost */}
+                <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
+                  <Calculator className="h-6 w-6 text-white" />
+                </div>
+                {/* Text — second in RTL flow → to the left of icon */}
+                <div className="flex flex-col items-end leading-tight">
+                  <span className="text-white font-bold text-lg whitespace-nowrap">
+                    حاسبات إيجيبيانا
+                  </span>
+                  <span className="text-blue-200 text-xs font-light whitespace-nowrap mt-0.5">
+                    {arabicDate}
+                  </span>
+                </div>
+              </Link>
+              {/* Mobile: calculator icon only (site name shown in center col) */}
+              <div className="lg:hidden bg-white/20 rounded-xl p-2 flex-shrink-0">
                 <Calculator className="h-6 w-6 text-white" />
               </div>
             </div>
@@ -249,8 +260,8 @@ export default function Header() {
             <span className="text-white text-sm font-bold whitespace-nowrap">الأكثر بحثاً:</span>
           </div>
 
-          {/* Scrollable links */}
-          <div className="flex-1 overflow-x-auto scrollbar-none">
+          {/* Scrollable links — centered in the available space */}
+          <div className="flex-1 flex items-center justify-center overflow-x-auto scrollbar-none">
             <div className="flex items-center whitespace-nowrap">
               {trendingLinks.map((link, i) => (
                 <span key={link.href} className="flex items-center">
