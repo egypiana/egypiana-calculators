@@ -99,80 +99,32 @@ export default function Header() {
       {/* ══════════════════════════════════════════
           ROW 1 — Main Navigation Bar
           ══════════════════════════════════════════ */}
-      <header className="bg-[#1E3A8A] sticky top-0 z-50 shadow-lg">
+      <header className="bg-[#1E3A8A] sticky top-0 z-50 shadow-lg" dir="ltr">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* ── 3-zone layout using relative + absolute centering ── */}
-          <div className="relative flex items-center h-16">
+          {/*
+           * 3-column CSS Grid — LTR order so columns are predictable:
+           *   Col A (left)   = actions (WhatsApp icon, search, dark, hamburger)
+           *   Col B (center) = nav links (desktop) | site name (mobile)
+           *   Col C (right)  = logo
+           *
+           * Visually in RTL page: logo appears RIGHT, nav CENTER, actions LEFT ✓
+           */}
+          <div
+            className="h-16 items-center"
+            style={{ display: "grid", gridTemplateColumns: "auto 1fr auto", gap: "8px" }}
+          >
 
-            {/* ── LEFT ZONE: hamburger (mobile) | full logo (desktop) ── */}
-            <div className="flex items-center gap-2 z-10 flex-shrink-0">
-              {/* Hamburger — mobile/tablet only */}
-              <button
-                onClick={() => setMobileMenuOpen(true)}
-                className="lg:hidden p-2 text-white hover:bg-white/20 rounded-lg transition-colors"
-                aria-label="القائمة"
-              >
-                <Menu className="h-5 w-5" />
-              </button>
-
-              {/* Full logo — desktop only */}
-              <div className="hidden lg:flex items-center gap-3">
-                <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
-                  <Calculator className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <Link
-                    href="/"
-                    className="text-white font-bold text-lg leading-tight block hover:text-blue-200 transition-colors"
-                  >
-                    حاسبات إيجيبيانا
-                  </Link>
-                  <span className="text-blue-200 text-xs font-light">
-                    {arabicDate}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* ── CENTER ZONE: absolutely centered (no flex bias) ── */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              {/* Mobile: site name centered */}
-              <Link
-                href="/"
-                className="lg:hidden pointer-events-auto text-white font-bold text-lg hover:text-blue-200 transition-colors"
-              >
-                حاسبات إيجيبيانا
-              </Link>
-
-              {/* Desktop: nav links centered */}
-              <nav className="hidden lg:flex pointer-events-auto items-center gap-0.5">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all duration-200 whitespace-nowrap ${
-                      isActive(link.href)
-                        ? "bg-white text-[#1E3A8A]"
-                        : "text-white hover:bg-white/20"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-
-            {/* ── RIGHT ZONE: action buttons ── */}
-            <div className="ml-auto flex items-center gap-1.5 z-10 flex-shrink-0">
+            {/* ── COL A (left) — actions ── */}
+            <div className="flex items-center gap-1">
               {/* WhatsApp CTA — desktop only */}
               <a
                 href="https://whatsapp.com/channel/0029Vb7ip3mEquiKNFmf682L"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden lg:flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors"
+                className="hidden lg:flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-3 py-2 rounded-lg transition-colors whitespace-nowrap"
               >
-                <WhatsAppIcon className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4 flex-shrink-0" />
                 <span className="hidden xl:inline">انضم قناتنا</span>
               </a>
 
@@ -193,12 +145,68 @@ export default function Header() {
               >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
+
+              {/* Hamburger — mobile/tablet only */}
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className="lg:hidden p-2 text-white hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="القائمة"
+              >
+                <Menu className="h-5 w-5" />
+              </button>
             </div>
+
+            {/* ── COL B (center) — nav (desktop) | site name (mobile) ── */}
+            <div className="flex items-center justify-center min-w-0 overflow-hidden" dir="rtl">
+              {/* Desktop: nav links */}
+              <nav className="hidden lg:flex items-center gap-0.5">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all duration-200 whitespace-nowrap ${
+                      isActive(link.href)
+                        ? "bg-white text-[#1E3A8A]"
+                        : "text-white hover:bg-white/20"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Mobile: site name centered */}
+              <Link
+                href="/"
+                className="lg:hidden text-white font-bold text-lg hover:text-blue-200 transition-colors whitespace-nowrap"
+              >
+                حاسبات إيجيبيانا
+              </Link>
+            </div>
+
+            {/* ── COL C (right) — logo ── */}
+            <div className="flex items-center gap-3 justify-end" dir="rtl">
+              <div className="min-w-0 hidden lg:block text-right">
+                <Link
+                  href="/"
+                  className="text-white font-bold text-lg leading-tight block hover:text-blue-200 transition-colors whitespace-nowrap"
+                >
+                  حاسبات إيجيبيانا
+                </Link>
+                <span className="text-blue-200 text-xs font-light whitespace-nowrap">
+                  {arabicDate}
+                </span>
+              </div>
+              <div className="bg-white/20 rounded-xl p-2 flex-shrink-0">
+                <Calculator className="h-6 w-6 text-white" />
+              </div>
+            </div>
+
           </div>
 
           {/* ── Search Bar ── */}
           {searchOpen && (
-            <div className="pb-3">
+            <div className="pb-3" dir="rtl">
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -232,7 +240,7 @@ export default function Header() {
       {/* ══════════════════════════════════════════
           ROW 2 — Trending Bar (desktop/tablet only)
           ══════════════════════════════════════════ */}
-      <div className="hidden md:flex bg-[#DC2626] h-10 items-center sticky top-16 z-40">
+      <div className="hidden md:flex bg-[#DC2626] h-10 items-center sticky top-16 z-40" dir="rtl">
         <div className="max-w-7xl mx-auto px-4 w-full flex items-center gap-3">
 
           {/* Label */}
@@ -261,7 +269,7 @@ export default function Header() {
           </div>
 
           {/* Social icons */}
-          <div className="flex items-center gap-1.5 flex-shrink-0">
+          <div className="flex items-center gap-2 flex-shrink-0" dir="ltr">
             {socialLinks.map(({ href, icon: Icon, label, color }) => (
               <a
                 key={href}
@@ -279,7 +287,7 @@ export default function Header() {
       </div>
 
       {/* ══════════════════════════════════════════
-          Mobile Menu Overlay
+          Mobile Menu Drawer
           ══════════════════════════════════════════ */}
       {mobileMenuOpen && (
         <>
@@ -289,8 +297,8 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           />
 
-          {/* Drawer */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-[#1E3A8A] z-50 shadow-2xl flex flex-col overflow-hidden">
+          {/* Drawer — slides in from the right */}
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-[#1E3A8A] z-50 shadow-2xl flex flex-col overflow-hidden" dir="rtl">
 
             {/* ── Drawer header ── */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/15 flex-shrink-0">
@@ -347,7 +355,7 @@ export default function Header() {
 
               {/* Nav links */}
               <nav className="flex flex-col gap-1">
-                <p className="text-white/50 text-xs font-semibold uppercase tracking-wider px-1 mb-1">
+                <p className="text-white/50 text-xs font-semibold tracking-wider px-1 mb-1">
                   الأقسام
                 </p>
                 {navLinks.map((link) => (
@@ -355,7 +363,7 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`flex items-center px-4 py-3 rounded-xl font-bold transition-all text-right text-sm ${
+                    className={`flex items-center px-4 py-3 rounded-xl font-bold transition-all text-sm ${
                       isActive(link.href)
                         ? "bg-white text-[#1E3A8A]"
                         : "text-white hover:bg-white/15 active:bg-white/25"
@@ -372,7 +380,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] active:bg-[#1aad54] text-white font-bold px-4 py-3 rounded-xl w-full transition-colors text-sm"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold px-4 py-3 rounded-xl w-full transition-colors text-sm"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 انضم لقناة واتساب
@@ -380,7 +388,7 @@ export default function Header() {
 
               {/* Quick links */}
               <div>
-                <p className="text-white/50 text-xs font-semibold uppercase tracking-wider px-1 mb-2">
+                <p className="text-white/50 text-xs font-semibold tracking-wider px-1 mb-2">
                   الأكثر بحثاً
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -389,7 +397,7 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-white text-xs bg-white/10 hover:bg-white/20 active:bg-white/30 px-3 py-1.5 rounded-full transition-colors font-medium"
+                      className="text-white text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full transition-colors font-medium"
                     >
                       {link.label}
                     </Link>
@@ -402,14 +410,14 @@ export default function Header() {
             {/* ── Drawer footer — social icons ── */}
             <div className="flex-shrink-0 border-t border-white/15 px-5 py-4">
               <p className="text-white/50 text-xs font-semibold mb-3">تابعنا</p>
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-center gap-3 flex-wrap" dir="ltr">
                 {socialLinks.map(({ href, icon: Icon, label }) => (
                   <a
                     key={href}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="text-white/70 hover:text-white active:text-white/50 transition-colors"
+                    className="text-white/70 hover:text-white transition-colors"
                     aria-label={label}
                     onClick={() => setMobileMenuOpen(false)}
                   >
